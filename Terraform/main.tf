@@ -18,7 +18,7 @@ module "east_webapp" {
   branch                = "main"
 }
 module "west_network" {
-  source            = "./modules/Network"
+  source            = "./modules/network"
   rg_name              = "west_rg-${var.environment}"
   location          = "West Europe"
   vnet_name         = "vnet-westus-${var.environment}"
@@ -27,7 +27,7 @@ module "west_network" {
 }
 
 module "east_network" {
-  source            = "./modules/Network"
+  source            = "./modules/network"
   rg_name              = "east_rg-${var.environment}"
   location          = "East US"
   vnet_name         = "vnet-eastus-${var.environment}"
