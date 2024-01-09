@@ -5,7 +5,7 @@ module "west_webapp" {
   app_service_plan_name = "WestServicePlan-${var.environment}"
   app_service_name      = "WestWebApp-${var.environment}"
   repo_url              = "https://github.com/Selmouni-Abdelilah/WebApplication_West.git"
-  branch                = "main"
+  branch                = "master"
 }
 
 module "east_webapp" {
@@ -15,7 +15,7 @@ module "east_webapp" {
   app_service_plan_name = "EastServicePlan-${var.environment}"
   app_service_name      = "EastWebApp-${var.environment}"
   repo_url              = "https://github.com/Selmouni-Abdelilah/WebApplication_East.git"
-  branch                = "main"
+  branch                = "master"
 }
 module "west_network" {
   source            = "./modules/network"
